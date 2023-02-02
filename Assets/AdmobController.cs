@@ -11,9 +11,9 @@ public class AdmobController : MonoBehaviour
     private BannerView banner;
 
 #if UNITY_IOS
-    private string appId="ca-app-pub-4962234576866611~6753748057";
-    private string intersitionalId="ca-app-pub-4962234576866611/3936013024";
-    private string bannerId="ca-app-pub-4962234576866611/1501421374";
+    private string appId="ca-app-pub-4962234576866611~7650244366";
+    private string intersitionalId="ca-app-pub-4962234576866611/4998647403";
+    private string bannerId="ca-app-pub-4962234576866611/2564055754";
 
     private string appIdUnity="4601830";
 #else

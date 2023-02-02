@@ -11,7 +11,7 @@ public class WatchAdsForMoney : MonoBehaviour
     private RewardedAd rewardBasedVideo;
 
 #if UNITY_IOS
-    private string appId = "ca-app-pub-4962234576866611~6753748057";
+    private string appId = "ca-app-pub-4962234576866611~7650244366";
 
     private string gameID = "4601830";
 #else
@@ -40,7 +40,7 @@ public class WatchAdsForMoney : MonoBehaviour
     void InitAdmobRewarded()
     {
     #if UNITY_IOS
-        this.rewardBasedVideo = new RewardedAd("ca-app-pub-4962234576866611/5057523009");
+        this.rewardBasedVideo = new RewardedAd("ca-app-pub-4962234576866611/6120157389");
     #else
         this.rewardBasedVideo = new RewardedAd("ca-app-pub-4962234576866611/9859911671");
     #endif
