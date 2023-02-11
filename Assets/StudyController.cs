@@ -16,10 +16,17 @@ public class StudyController : MonoBehaviour
 
     void Start(){
         last=studyPanels.Length-1;
+        
+		Next();
+    }
+    
+    public void NextButtonHandler(){
+    	CancelInvoke(nameof(Next));
+    	Next();
     }
 
-    void Update(){
-        if(DefendersListController.GameStarted && Input.GetMouseButtonUp(0)){
+    public void Next(){
+        if(DefendersListController.GameStarted){
             if (current == 0)
             {
                 water.PickAmount(120);
@@ -38,6 +45,8 @@ public class StudyController : MonoBehaviour
                 show(current);
             }
         }
+        
+    	Invoke(nameof(Next), 6f);
     }
 
     void show(int n){
@@ -54,6 +63,8 @@ public class StudyController : MonoBehaviour
 
 
     public void completeStudy(int scene){
+    DefendersListController.GameStarted = false;
+    hideAll();
         PlayerPrefs.SetInt("studied", 1);
         scenesLoadingController.openScene(scene);
     }
